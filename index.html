@@ -1,0 +1,65 @@
+<!doctype html> 
+<html lang="en"> 
+
+    <head> 
+        <meta charset="UTF-8" />
+        <title> Plateformer avec Phaser 3 </title>
+        <!-- lib phaser 3.52 jsdeliver -->
+        <script src="//cdn.jsdelivr.net/npm/phaser@3.52.0/dist/phaser.js"></script>
+        <!-- scripts JavaScript -->
+        <script type="text/javascript" src="src/main.js"></script>
+        <script type="text/javascript" src="src/scripts/chrono.js"></script>
+        <script type="text/javascript" src="src/scripts/highScore.js"></script>
+        <!-- style CSS -->
+        <link type="text/css" rel="stylesheet" href="style.css">
+        <style type="text/css">
+            body 
+            {
+                margin: 0;
+            }
+        </style>
+    </head>
+
+    <body onload="chronoStart();">
+
+        <div class="elementHUD"> 
+            <p id="score"> score </p> 
+        </div>
+        <div class="elementHUD">  
+            <p id="highScore"> highScore </p> 
+        </div>
+        <div class="elementHUD"> 
+            <p id="chronotime"> 00:00:000 </p>
+        </div>
+
+        <!-- Popup GameOver -->
+        <div id="popupGameOver" class="popup">
+            <!-- Contenu de la Popup -->
+            <div id="contenuPopUpGameOver">
+                <span id="fermerPopUp" onClick="document.location.reload(true)"> &times; </span>
+                <h2> <strong> Game Over </strong> </h2>
+                <p> Vous vous êtes fait avoir... </p>
+                <p> Votre meilleur score est de : <span id="popupHigherScore"> 00000 </span> </p>
+                <p> Votre score est de : <span id="popupScore"> 00000 </span> </p>
+                <p> En <span id="chronotime2"> 00:00:000 </span> de temps </p>
+                <div id="BoutonsGameOver"> 
+                    <input type="button" value="Recommencer" onClick="document.location.reload(true)">
+                    <a href="index.html"> <input type="button" value="Menu Principal"> </a>
+                </div>
+            </div>      
+        </div>
+
+    </body>
+
+</html>
+
+    <!--
+         __________
+        |  ________|
+        |  |    
+        |  |    ___
+        |  |    |  |     .          __            ___
+        |  |____|  | | | | |   |   |  | |  | |\/| |_
+        |__________| |_| | |__ |__ |--| |__| |  | |__
+
+    -->
